@@ -1,0 +1,55 @@
+/* CSS Document */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, ul, ol, li, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+strong {font-weight: bold;}
+em {font-style: italic;}
+
+/* End "Reset Styles
+ */
+
+/* THESE VALUES SHOULD MATCH THE SITE'S MAIN STYLES */
+
+body, table{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #5e5e5f;
+  line-height: 22px;
+  font-weight: normal;
+}
+
+p { margin-bottom: 20px; }
+a:link,
+a:visited { 
+	color: #f1592a;
+	text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #000;	
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+ul, ol { list-style-position: outside; margin-left: 40px; margin-bottom: 20px; }
+li {
+	margin-bottom: 14px;
+	line-height: 18px;
+}

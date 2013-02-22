@@ -1,0 +1,27 @@
+# Turn on URL rewriting
+RewriteEngine On
+
+# Installation directory
+RewriteBase /
+
+# Protect hidden files from being viewed
+<Files .*>
+	Order Deny,Allow
+	Deny From All
+</Files>
+
+# Allow any files or directories that exist to be displayed directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other URLs to index.php/URL
+RewriteRule .* index.php/?uri=$0 [PT]
+
+php_value  upload_max_filesize  100M
+php_value  post_max_size  200M
+php_value  memory_limit 500M 
+php_value  max_execution_time 180
+
+# Post launch, redirect any links to the Developement Address to the new domain name
+# RewriteCond %{HTTP_HOST} ^dev66.thepitagroup.com$
+# RewriteRule ^index.php/(.*)$ http://markets.ebmpapts.us/?$1 [R=301,L]
