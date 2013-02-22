@@ -13,7 +13,7 @@ if(is_array($_SESSION['roles']) )
 <?php 
 
 // check for submitted form data
-if ( isset($_POST['submit']) && isset( $_POST['name']) && isset($_SESSION['registration_password_confirmed']) )
+if ( isset($_POST['submit']) && isset( $_POST['name']) )
 {
 	// validate posted data
 	if( trim($_POST['name']) == "" || strlen($_POST['name']) < 5) // 5 assumes at least 2 letters each for first and last name plus a space between them
@@ -34,11 +34,7 @@ if ( isset($_POST['submit']) && isset( $_POST['name']) && isset($_SESSION['regis
 	{
 		$err[] = "Password Mismatch: Please enter the same password in the password confirmation field";
 	}
-	if( !in_array($_POST['region'],$regions) )
-	{
-		$err[] = "Please select your region from the list of valid regions";	
-	}
-	
+		
 	// if no errors, register the user
 	if( !isset($err[0]) )
 	{
@@ -53,8 +49,7 @@ if ( isset($_POST['submit']) && isset( $_POST['name']) && isset($_SESSION['regis
 			$user->name = $_POST['name'];
 			$user->email = $_POST['email'];
 			$user->password = hashPassword($_POST['password']);
-			$user->roles = 'sales';
-			$user->region = $_POST['region'];
+			$user->roles = 'admin';
 			$user->last_login = date("Y-m-d H:i:s");
 			$user->total_logins = 1;
 			$user->save();
