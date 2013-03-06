@@ -45,7 +45,6 @@ if ( isset($_POST['submit']) && isset( $_POST['name']) )
 			$user->password = hashPassword($_POST['password']);
 		}
 		
-		$user->region = $_POST['region'];
 		$user->save();
 	
 		setHeader("Location: /admin",true);	  // forward user off this page

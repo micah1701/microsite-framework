@@ -5,10 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/db.php';
 
 $uri_parts = (isset($_GET['uri']) ) ? explode("/",$_GET['uri']) : array('home');
 $view = $uri_parts[0];
-$pages = array(  "home" 	=> array("title"=>"My Presentations","required_role"=>"sales"),
-				 "login"	=> array("title"=>"Log In","required_role"=>false),
-				 "register"	=> array("title"=>"Register for Access","required_role"=>false),
-				 "myprofile"=> array("title"=>"My Profile","required_role"=>"sales")
+$pages = array(  "home" 	=> array("title"=>"Homepage","required_role"=>false)
 			  );
 
 if(!array_key_exists($view,$pages) )
